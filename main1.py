@@ -36,9 +36,11 @@ print("Time 2 program:", t2_stop-t2_start)
 
 #Задание 2
 data = []
+
 for i in open('data2.csv'):
     x = i.split(',')
     data.append(float(x[5]))
+    
 alp = str(np.std(data))
 plt.text(550, 0.0045, alp)
 plt.hist(data, bins=20, density=True)
