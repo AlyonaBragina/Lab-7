@@ -33,17 +33,27 @@ from time import perf_counter
 # print("Time 2 program:", t2_stop-t2_start)
 
 #Задание 2
-data = []
-for i in open('data2.csv'):
-    x = i.split(',')
-    data.append(float(x[5]))
-alp = str(np.std(data))
-plt.text(550, 0.0045, alp)
-plt.hist(data, bins=20, density=True)
-plt.title('Распределение проводимости')
-plt.xlabel('Conductivity')
-plt.ylabel('Level')
-plt.show()
+# data = []
+# for i in open('data2.csv'):
+#     x = i.split(',')
+#     data.append(float(x[5]))
+# alp = str(np.std(data))
+# plt.text(550, 0.0045, alp)
+# plt.hist(data, bins=20, density=True)
+# plt.title('Распределение проводимости')
+# plt.xlabel('Conductivity')
+# plt.ylabel('Level')
+# plt.show()
 
 
 #Задание 3
+
+# fig = plt.figure()
+# ax = plt.axes(projection='3d')
+
+# x = np.linspace(-3*np.pi, 3*np.pi, 100)
+# y = x*np.cos(x)
+# z = np.sin(x)
+
+# ax.scatter(x, y, z)
+# plt.show()
