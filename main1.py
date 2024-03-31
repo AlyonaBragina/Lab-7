@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import random
 from time import perf_counter
+import matplotlib.animation as animation
+from matplotlib.animation import PillowWriter
 #Задание 1
 # res = []
 # a2 = []
@@ -57,3 +59,19 @@ from time import perf_counter
 
 # ax.scatter(x, y, z)
 # plt.show()
+
+
+# Доп задание
+x = np.linspace(0, 2 * np.pi, 100)
+y = np.sin(x)
+
+fig, ax = plt.subplots()
+line, = ax.plot(x, y)
+
+def animate(i):
+    line.set_ydata(np.sin(x + i / 10.0))  # Анимация изменения функции sin(x)
+    return line,
+
+ani = animation.FuncAnimation(fig, animate, frames=100, interval=50)
+writer = PillowWriter(fps=20)
+plt.show()
